@@ -1028,7 +1028,21 @@ function draw() {
       image(gameOverImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(deadImage, x - 25, y - 25, 50, 50);
 
+      //play again
       if (x < 100) {
+        gameStarted = false;
+        dead = false;
+        level1complete = false;
+        level2complete = false;
+        level3complete = false;
+        level4complete = false;
+        level5complete = false;
+      }
+
+      //quit
+      if (x < 100) {
+        intro1Played = false;
+        intro2Played = false;
         gameStarted = false;
         dead = false;
         level1complete = false;
@@ -1043,10 +1057,21 @@ function draw() {
       image(backgroundImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(endImage, 0, 0, windowWidth, windowWidth * 0.625);
 
-      //dead chicken
-      //move back to the right to start again
-
+      //play again
       if (x < 100) {
+        gameStarted = false;
+        dead = false;
+        level1complete = false;
+        level2complete = false;
+        level3complete = false;
+        level4complete = false;
+        level5complete = false;
+      }
+
+      //quit
+      if (x < 100) {
+        intro1Played = false;
+        intro2Played = false;
         gameStarted = false;
         dead = false;
         level1complete = false;
