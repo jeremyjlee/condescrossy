@@ -34,6 +34,7 @@ function setup() {
   deadImage = loadImage("Images/dead.png");
   introImage = loadImage("Images/intro.png");
   instructionsImage = loadImage("Images/getacross.png");
+  speedImage = loadImage("Images/speed.png");
 
   //level 1 cars
   rng1_1 = random();
@@ -268,8 +269,6 @@ function draw() {
       image(instructionsImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(chickenImage, x - 25, y - 25, 50, 50);
 
-      fill(255, 0, 0);
-      rect(590, 820, 150, 150);
       if (y > 820 && y < 970 && x < 740 && x > 590) {
         intro2Played = true;
       }
@@ -282,7 +281,7 @@ function draw() {
 
       image(chickenImage, x - 25, y - 25, 50, 50);
 
-      if (x < 100) {
+      if (x < windowWidth / 10) {
         gameStarted = true;
       }
     }
@@ -831,6 +830,7 @@ function draw() {
       dead == false
     ) {
       image(backgroundImage, 0, 0, windowWidth, windowWidth * 0.625);
+      image(speedImage, 0, 0, windowWidth, windowWidth * 0.625);
 
       //generate car height
       let car4_1height = 100;
@@ -1029,7 +1029,9 @@ function draw() {
       image(deadImage, x - 25, y - 25, 50, 50);
 
       //play again
-      if (x < 100) {
+      if (x < windowWidth / 10) {
+        intro1Played = true;
+        intro2Played = true;
         gameStarted = false;
         dead = false;
         level1complete = false;
@@ -1040,7 +1042,7 @@ function draw() {
       }
 
       //quit
-      if (x < 100) {
+      if (x > windowWidth - 270 && x < windowWidth - 70 && y > 855 && y < 955) {
         intro1Played = false;
         intro2Played = false;
         gameStarted = false;
@@ -1056,9 +1058,12 @@ function draw() {
     if (level5complete == true) {
       image(backgroundImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(endImage, 0, 0, windowWidth, windowWidth * 0.625);
+      image(chickenImage, x - 25, y - 25, 50, 50);
 
       //play again
-      if (x < 100) {
+      if (x < windowWidth / 10) {
+        intro1Played = true;
+        intro2Played = true;
         gameStarted = false;
         dead = false;
         level1complete = false;
@@ -1069,7 +1074,7 @@ function draw() {
       }
 
       //quit
-      if (x < 100) {
+      if (x > windowWidth - 270 && x < windowWidth - 70 && y > 855 && y < 955) {
         intro1Played = false;
         intro2Played = false;
         gameStarted = false;
