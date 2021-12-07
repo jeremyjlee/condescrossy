@@ -259,6 +259,8 @@ function draw() {
     if (intro1Played == false) {
       image(introImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(chickenImage, x - 25, y - 25, 50, 50);
+      fill(255, 0, 0);
+      rect(100, 700, 150, 150);
       if (y > 700 && y < 850 && x < 250 && x > 100) {
         intro1Played = true;
       }
@@ -268,7 +270,8 @@ function draw() {
       image(backgroundImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(instructionsImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(chickenImage, x - 25, y - 25, 50, 50);
-
+      fill(255, 0, 0);
+      rect(590, 820, 150, 150);
       if (y > 820 && y < 970 && x < 740 && x > 590) {
         intro2Played = true;
       }
@@ -280,7 +283,6 @@ function draw() {
       image(startImage, 0, 0, windowWidth, windowWidth * 0.625);
 
       image(chickenImage, x - 25, y - 25, 50, 50);
-
       if (x < windowWidth / 10) {
         gameStarted = true;
       }
@@ -1027,6 +1029,8 @@ function draw() {
       image(backgroundImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(gameOverImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(deadImage, x - 25, y - 25, 50, 50);
+      fill(255, 0, 0);
+      rect(windowWidth - 270, 855, 200, 100);
 
       //play again
       if (x < windowWidth / 10) {
@@ -1059,7 +1063,8 @@ function draw() {
       image(backgroundImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(endImage, 0, 0, windowWidth, windowWidth * 0.625);
       image(chickenImage, x - 25, y - 25, 50, 50);
-
+      fill(255, 0, 0);
+      rect(windowWidth - 270, 855, 200, 100);
       //play again
       if (x < windowWidth / 10) {
         intro1Played = true;
